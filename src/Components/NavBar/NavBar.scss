@@ -1,0 +1,56 @@
+@use "../../Styles/variables" as *;
+
+body {
+  background-color: $page-background;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: $main-pink;
+  padding: 2em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 1em;
+
+      a {
+        color: white; // default text color
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: 500;
+
+        // hover effect
+        &:hover {
+          color: yellow; // replace with your desired hover color
+          transition: color 0.3s ease-in-out;
+        }
+
+        // active state effect
+        &.active {
+          color: red; // replace with your desired active color
+        }
+      }
+    }
+  }
+}
+.icons {display: flex;}
+.icon1 {
+  width: 40px;
+  height: 40px;
+}
+.icon2 {
+  width: 40px;
+  height: 40px;
+}
