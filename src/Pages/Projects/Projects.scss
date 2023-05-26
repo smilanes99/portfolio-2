@@ -1,0 +1,61 @@
+@use "../../Styles/variables" as *;
+@use "../../Styles/typography" as*;
+
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: $main-pink;
+    margin-top: 200px;
+
+    .projects-ul {display:flex;
+        text-decoration: none;
+        list-style-type: none;
+    }
+    .project {
+      position: relative;
+      margin: 0 20px;
+      perspective: 1000px;
+  
+      .project-icon {
+        width: 220px;
+        height: 220px;
+     
+      }
+  
+      .project-title {
+        text-align: center;
+        
+      }
+  
+      .project-description {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+        text-align: center;
+        display: flex; 
+        align-items: center;
+        
+      }
+  
+      &:hover {
+        .project-icon, .project-title {
+          transform: rotateY(180deg);
+          opacity: 0;
+        }
+  
+        .project-description {
+          transform: rotateY(0);
+          opacity: 1;
+          
+        }
+      }
+    }
+  }

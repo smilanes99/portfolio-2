@@ -1,12 +1,20 @@
-import React from 'react';
-// import './AboutMe.css'; 
-// import backgroundImage from './background.jpg'; 
+import React, {useEffect} from 'react';
+import './AboutMe.scss'; 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import AboutMeTitle from "../../Assets/Images/AboutMeTitle.png"
 
 const AboutMe = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 2500 });
+  }, []);
+
   return (
     <div>
-        <h1>About Me</h1>
-        <p>Your text goes here...</p>
+        <img className="about-me-title" src={AboutMeTitle} alt='ABOUT ME'/>
+        <div  data-aos="zoom-in" className='bio'>
+        </div>
       </div>
    
   );

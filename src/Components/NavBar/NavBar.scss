@@ -1,16 +1,17 @@
 @use "../../Styles/variables" as *;
+@use "../../Styles/typography" as*;
 
 body {
   background-color: $page-background;
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: "Bugaki";
 }
 nav {
   display: flex;
   justify-content: space-between;
   background-color: $main-pink;
-  padding: 2em;
+  padding: 1rem;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -18,9 +19,11 @@ nav {
   ul {
     display: flex;
     justify-content: space-between;
+    align-items:center;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0; 
+    white-space: nowrap;
 
     li {
       margin: 0 1em;
@@ -33,7 +36,7 @@ nav {
 
         // hover effect
         &:hover {
-          color: yellow; // replace with your desired hover color
+          color: $light-yellow; 
           transition: color 0.3s ease-in-out;
         }
 
@@ -45,12 +48,17 @@ nav {
     }
   }
 }
-.icons {display: flex;}
-.icon1 {
-  width: 40px;
-  height: 40px;
+.icons {
+  display: flex;
+  margin-right: auto;
 }
-.icon2 {
-  width: 40px;
-  height: 40px;
+.icon-linkedin {
+  width: 60px;
+  height: 60px;
+  margin-left: 800px;
+}
+
+.icon-github {
+  width: 60px;
+  height: 60px;
 }
